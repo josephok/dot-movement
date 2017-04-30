@@ -1,6 +1,6 @@
 String.prototype.repeat = function(num) {
   return new Array(num + 1).join(this);
-}
+};
 
 const NUM_OF_DOT = 100;
 
@@ -25,9 +25,7 @@ $(function init() {
 
   function move() {
     for (let i = 1; i <= NUM_OF_DOT; i++) {
-      $(`.inner:nth-child(${i})`).css('background-color', function() {
-        return getRandomColor();
-      });
+      $(`.inner:nth-child(${i})`).css('background-color', getRandomColor());
     }
     for (let i = 1; i <= NUM_OF_DOT; i++) {
       let x = Math.random() * parentWidth;
